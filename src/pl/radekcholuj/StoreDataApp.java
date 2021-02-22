@@ -24,6 +24,10 @@ public class StoreDataApp {
                 case 2:
                     System.out.println("Get data");
                     break;
+                case 3:
+                    repo = new FileRepo();
+                    repo.getById(2);
+                    break;
             }
 
         } while (option != 0);
@@ -57,7 +61,8 @@ public class StoreDataApp {
     private static void displayMainMenu() {
         System.out.println("------ Store Data App ------");
         System.out.println("1 - save data");
-        System.out.println("2 - get data");
+        System.out.println("2 - get all data");
+        System.out.println("3 - get by id");
         System.out.println("0 - stop");
     }
 }
